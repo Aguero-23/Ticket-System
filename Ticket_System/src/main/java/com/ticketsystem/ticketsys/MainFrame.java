@@ -5,6 +5,8 @@
  */
 package com.ticketsystem.ticketsys;
 
+import javax.swing.JOptionPane;
+
 /**
  *
  * @author Julio
@@ -42,9 +44,14 @@ public class MainFrame extends javax.swing.JFrame {
         jtf_Identificacion = new javax.swing.JTextField();
         jb_BuscarTransaccion = new javax.swing.JButton();
         jLabel3 = new javax.swing.JLabel();
+        jLabel7 = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setCursor(new java.awt.Cursor(java.awt.Cursor.DEFAULT_CURSOR));
+        setLocation(new java.awt.Point(350, 190));
+        setSize(new java.awt.Dimension(500, 500));
+
+        jp_PanelPrincipal.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
 
         jb_GenerarBoton.setText("Generar Ticket");
         jb_GenerarBoton.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
@@ -69,7 +76,6 @@ public class MainFrame extends javax.swing.JFrame {
 
         jLabel4.setText("Apellido 1");
 
-        jtf_Apellido1.setText(" ");
         jtf_Apellido1.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jtf_Apellido1ActionPerformed(evt);
@@ -78,11 +84,7 @@ public class MainFrame extends javax.swing.JFrame {
 
         jLabel5.setText("Apellido 2");
 
-        jtf_Apellido2.setText(" ");
-
         jLabel6.setText("Identificación");
-
-        jtf_Identificacion.setText(" ");
 
         jb_BuscarTransaccion.setText("Buscar");
 
@@ -102,13 +104,13 @@ public class MainFrame extends javax.swing.JFrame {
                             .addComponent(jLabel4)
                             .addComponent(jLabel5)
                             .addComponent(jLabel6))
-                        .addGap(0, 65, Short.MAX_VALUE))
+                        .addGap(0, 0, Short.MAX_VALUE))
                     .addComponent(jtf_Identificacion))
                 .addContainerGap())
             .addGroup(jp_FormTransaccionesLayout.createSequentialGroup()
                 .addGap(37, 37, 37)
                 .addComponent(jb_BuscarTransaccion)
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                .addContainerGap(47, Short.MAX_VALUE))
         );
         jp_FormTransaccionesLayout.setVerticalGroup(
             jp_FormTransaccionesLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -137,41 +139,54 @@ public class MainFrame extends javax.swing.JFrame {
 
         jLabel3.setText("Formulario de transacciones");
 
+        jLabel7.setFont(new java.awt.Font("Tahoma", 0, 30)); // NOI18N
+        jLabel7.setText("Ticket System");
+
         javax.swing.GroupLayout jp_PanelPrincipalLayout = new javax.swing.GroupLayout(jp_PanelPrincipal);
         jp_PanelPrincipal.setLayout(jp_PanelPrincipalLayout);
         jp_PanelPrincipalLayout.setHorizontalGroup(
             jp_PanelPrincipalLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jp_PanelPrincipalLayout.createSequentialGroup()
-                .addGap(50, 50, 50)
-                .addGroup(jp_PanelPrincipalLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(jLabel1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                    .addComponent(jl_NumEnCola, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-                .addGap(18, 18, 18)
-                .addComponent(jb_GenerarBoton)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(jp_FormTransacciones, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jp_PanelPrincipalLayout.createSequentialGroup()
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                .addComponent(jLabel3)
-                .addContainerGap())
+                .addGroup(jp_PanelPrincipalLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jp_PanelPrincipalLayout.createSequentialGroup()
+                        .addComponent(jb_GenerarBoton, javax.swing.GroupLayout.PREFERRED_SIZE, 111, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGap(33, 33, 33)
+                        .addGroup(jp_PanelPrincipalLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addComponent(jp_FormTransacciones, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jp_PanelPrincipalLayout.createSequentialGroup()
+                                .addComponent(jLabel3)
+                                .addContainerGap())))
+                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jp_PanelPrincipalLayout.createSequentialGroup()
+                        .addComponent(jLabel1)
+                        .addGap(196, 196, 196))))
+            .addGroup(jp_PanelPrincipalLayout.createSequentialGroup()
+                .addGap(166, 166, 166)
+                .addGroup(jp_PanelPrincipalLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                    .addComponent(jLabel7)
+                    .addComponent(jl_NumEnCola, javax.swing.GroupLayout.PREFERRED_SIZE, 170, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addContainerGap(147, Short.MAX_VALUE))
         );
         jp_PanelPrincipalLayout.setVerticalGroup(
             jp_PanelPrincipalLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jp_PanelPrincipalLayout.createSequentialGroup()
-                .addGap(96, 96, 96)
+                .addGap(35, 35, 35)
+                .addComponent(jLabel7)
+                .addGap(18, 18, 18)
+                .addComponent(jLabel1)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addGroup(jp_PanelPrincipalLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(jp_PanelPrincipalLayout.createSequentialGroup()
-                        .addComponent(jLabel1)
-                        .addGap(18, 18, 18)
-                        .addComponent(jl_NumEnCola))
-                    .addComponent(jb_GenerarBoton, javax.swing.GroupLayout.PREFERRED_SIZE, 107, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addContainerGap(97, Short.MAX_VALUE))
-            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jp_PanelPrincipalLayout.createSequentialGroup()
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                .addComponent(jLabel3)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(jp_FormTransacciones, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap())
+                        .addComponent(jl_NumEnCola, javax.swing.GroupLayout.PREFERRED_SIZE, 14, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGap(23, 23, 23)
+                        .addComponent(jb_GenerarBoton, javax.swing.GroupLayout.PREFERRED_SIZE, 107, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jp_PanelPrincipalLayout.createSequentialGroup()
+                        .addGap(94, 94, 94)
+                        .addComponent(jLabel3)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                        .addComponent(jp_FormTransacciones, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addContainerGap())))
         );
 
         jb_GenerarBoton.getAccessibleContext().setAccessibleName("jb_GenerarBoton");
@@ -181,7 +196,7 @@ public class MainFrame extends javax.swing.JFrame {
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(jp_PanelPrincipal, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+            .addComponent(jp_PanelPrincipal, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -192,9 +207,31 @@ public class MainFrame extends javax.swing.JFrame {
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
-
+    int numTicket = 1;
+    Lista lis = new Lista();
     private void jb_GenerarBotonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jb_GenerarBotonActionPerformed
         //Asignar tickete a persona y agregar a la lista.
+        try {
+            if (lis.buscar(Integer.parseInt(jtf_Identificacion.getText()))) {
+                JOptionPane.showMessageDialog(this, "Ya estas en espera.");
+            } else {
+                if (jtf_Nombre.getText().equals(null) || jtf_Apellido1.getText().equals(null)
+                        || jtf_Apellido2.getText().equals(null) || jtf_Identificacion.getText().equals(null)) {
+                    JOptionPane.showMessageDialog(this, "El formulario está vacio o le faltan datos.");
+                } else {
+                    lis.insert(new Persona(Integer.parseInt(jtf_Identificacion.getText()), numTicket,
+                            jtf_Nombre.getText(), jtf_Apellido1.getText(), jtf_Apellido2.getText()));
+                    jl_NumEnCola.setText("" + numTicket);
+                    numTicket++;
+                    jtf_Nombre.setText("");
+                    jtf_Apellido1.setText("");
+                    jtf_Apellido2.setText("");
+                    jtf_Identificacion.setText("");
+                }
+            }
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
     }//GEN-LAST:event_jb_GenerarBotonActionPerformed
 
     private void jtf_NombreActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jtf_NombreActionPerformed
@@ -247,6 +284,7 @@ public class MainFrame extends javax.swing.JFrame {
     private javax.swing.JLabel jLabel4;
     private javax.swing.JLabel jLabel5;
     private javax.swing.JLabel jLabel6;
+    private javax.swing.JLabel jLabel7;
     private javax.swing.JButton jb_BuscarTransaccion;
     private javax.swing.JButton jb_GenerarBoton;
     private javax.swing.JLabel jl_NumEnCola;
