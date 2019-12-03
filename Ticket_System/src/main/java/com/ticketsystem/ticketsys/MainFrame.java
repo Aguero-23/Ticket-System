@@ -1,8 +1,8 @@
 /*
  * To change this license header, choose License Headers in Project Properties.
  * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
+ * a000nd open the template in the editor.
+ */ 
 package com.ticketsystem.ticketsys;
 
 import javax.swing.JOptionPane;
@@ -15,7 +15,7 @@ public class MainFrame extends javax.swing.JFrame {
 
     /**
      * Creates new form MainFrame
-     * This is a kuik fix
+     * This is a kuik fix v2
      */
     public MainFrame() {
         initComponents();
