@@ -15,6 +15,7 @@ public class MainFrame extends javax.swing.JFrame {
 
     /**
      * Creates new form MainFrame
+     * This is a kuik fix
      */
     public MainFrame() {
         initComponents();
