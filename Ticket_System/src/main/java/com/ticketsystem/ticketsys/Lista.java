@@ -39,4 +39,21 @@ public class Lista {
         }
         return encontrado;
     }
+    
+    public Persona buscarPersona(int identificacion) {
+        Nodo aux = siguiente;
+        Nodo getter = null;
+        boolean encontrado = false;
+
+        if (siguiente != null) {
+            while (aux != null && !encontrado) {
+                if (aux.getPersona().getId() == identificacion) {
+                    getter = aux;
+                    encontrado = true;
+                }
+                aux = aux.getSiguiente();
+            }
+        }
+        return getter.getPersona();
+    }
 }

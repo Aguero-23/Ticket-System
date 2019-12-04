@@ -56,4 +56,11 @@ public class Persona {
         this.apellido2 = apellido2;
     }
 
+    @Override
+    public String toString() {
+        return "Persona: " + id + " " + idEstruc + " " + nombre + " " + apellido1 + " " + apellido2 + "\n";
+    }
+    
+    
+
 }

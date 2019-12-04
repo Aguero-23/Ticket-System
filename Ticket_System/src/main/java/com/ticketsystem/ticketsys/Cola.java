@@ -31,8 +31,8 @@ public class Cola {
         } else {
             Nodo aux = frente;
             while (aux != null) {
-                s += aux.getPersona();
-                aux = aux.getUltimo();
+                s += aux;
+                aux = aux.getSiguiente();
             }
         }
         return s;

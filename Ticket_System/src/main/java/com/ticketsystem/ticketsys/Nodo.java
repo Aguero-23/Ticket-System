@@ -32,6 +32,11 @@ public class Nodo {
     public void setUltimo(Nodo ultimo) {
         this.ultimo = ultimo;
     }
+
+    @Override
+    public String toString() {
+        return "" + persona;
+    }
     
     
 }

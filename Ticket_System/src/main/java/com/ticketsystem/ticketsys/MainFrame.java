@@ -222,6 +222,7 @@ public class MainFrame extends javax.swing.JFrame {
     }// </editor-fold>//GEN-END:initComponents
     int numTicket = 1;
     Lista lis = new Lista();
+    Cola c = new Cola();
     private void jb_GenerarBotonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jb_GenerarBotonActionPerformed
         //Asignar tickete a persona y agregar a la lista.
 
@@ -238,6 +239,7 @@ public class MainFrame extends javax.swing.JFrame {
             } else {
                 lis.insert(new Persona(Integer.parseInt(jtf_Identificacion.getText()), numTicket,
                         jtf_Nombre.getText(), jtf_Apellido1.getText(), jtf_Apellido2.getText()));
+                c.encola(lis.buscarPersona(Integer.parseInt(jtf_Identificacion.getText())));
                 jl_NumEnCola.setText("" + numTicket);
                 numTicket++;
                 jtf_Nombre.setText("");
@@ -260,8 +262,7 @@ public class MainFrame extends javax.swing.JFrame {
 
     private void ButtonTransactionActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_ButtonTransactionActionPerformed
         // TODO add your handling code here:
-        Cola c = new Cola();
-        c.toString();
+        System.out.println(c.toString());
     }//GEN-LAST:event_ButtonTransactionActionPerformed
 
     /**
