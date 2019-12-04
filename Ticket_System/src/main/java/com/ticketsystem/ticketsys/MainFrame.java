@@ -4,7 +4,7 @@ import javax.swing.JOptionPane;
 
 /**
  *
- * @author Su paire
+ * @author Su 
  */
 public class MainFrame extends javax.swing.JFrame {
 
