@@ -1,7 +1,7 @@
 package com.ticketsystem.ticketsys;
 
 public class Cola {
-
+//Creando colas v1
     Nodo frente;
     Nodo ultimo;
 
