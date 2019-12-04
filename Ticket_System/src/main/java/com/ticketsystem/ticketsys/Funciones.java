@@ -1,9 +1,5 @@
 package com.ticketsystem.ticketsys;
 
-/**
- *
- * @author kevinvsequeira
- */
 public class Funciones {
     
     public void atiende(Nodo p){
