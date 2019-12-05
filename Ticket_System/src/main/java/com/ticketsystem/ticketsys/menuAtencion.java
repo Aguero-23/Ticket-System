@@ -31,7 +31,7 @@ public class menuAtencion extends javax.swing.JFrame {
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setTitle("Menú atención");
 
-        jButton1.setText("Consultar siguiente");
+        jButton1.setText("Consulta saldo");
         jButton1.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jButton1ActionPerformed(evt);
@@ -43,16 +43,16 @@ public class menuAtencion extends javax.swing.JFrame {
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
-                .addGap(119, 119, 119)
+                .addGap(50, 50, 50)
                 .addComponent(jButton1)
-                .addContainerGap(156, Short.MAX_VALUE))
+                .addContainerGap(247, Short.MAX_VALUE))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
-                .addGap(80, 80, 80)
+                .addGap(23, 23, 23)
                 .addComponent(jButton1)
-                .addContainerGap(197, Short.MAX_VALUE))
+                .addContainerGap(254, Short.MAX_VALUE))
         );
 
         setSize(new java.awt.Dimension(416, 339));
